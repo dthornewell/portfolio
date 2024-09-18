@@ -1,5 +1,6 @@
 const buffer = 30;
 const radius = 100;
+const fps = 30;
 
 class Section {
     constructor(left, top, width, height) {
@@ -63,6 +64,7 @@ class Particle {
     }
 
     draw() {
+        // TODO: Maybe prerender this as an image for performance
         const angle = Math.atan2(this.velocity.y, this.velocity.x);
 
         this.context.save(); // Save the current state of the context
@@ -89,7 +91,7 @@ class ParticleNetwork {
         this.container = container;
         this.containerSize = { width: container.offsetWidth, height: container.offsetHeight };
         this.options = Object.assign({
-            particleColor: '#fff',
+            particleColor: '#FFFFFF',
             background: '#1a252f',
             interactive: true,
             velocity: 1,
@@ -97,6 +99,7 @@ class ParticleNetwork {
             numSections: 5,
         }, options);
         this.sections = [];
+
         this.init();
     }
 
@@ -109,6 +112,7 @@ class ParticleNetwork {
         this.context = this.canvas.getContext('2d');
         this.canvas.width = this.containerSize.width;
         this.canvas.height = this.containerSize.height;
+        this.context.globalAlpha = 0.25;
 
         this.setStyles(this.container, { position: 'relative' });
         this.setStyles(this.canvas, { zIndex: 20, position: 'relative' });
@@ -253,10 +257,10 @@ class ParticleNetwork {
     }
 
     update() {
-        const currentTime = performance.now();
+        // Clear canvas
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
-        this.drawSectionBoundaries();
+        //this.drawSectionBoundaries();
 
         //Update particles
         var numSections = this.options.numSections;
@@ -386,7 +390,9 @@ class ParticleNetwork {
 
         //Animate frame
         if (this.options.velocity !== 0) {
-            requestAnimationFrame(this.update.bind(this));
+            setTimeout(() => {
+                requestAnimationFrame(this.update.bind(this));
+              }, 1000 / fps);
         }
     }
 }
@@ -398,7 +404,7 @@ function loadParticles() {
         particleColor: '#FFF',
         interactive: true,
         background: '#000000',
-        speed: 1,
+        velocity: 4,
         density: 4000,
         numSections: 7,
 
