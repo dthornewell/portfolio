@@ -1,6 +1,7 @@
 const buffer = 30;
 const radius = 100;
 const fps = 30;
+const dimming = 0.25;
 
 class Section {
     constructor(left, top, width, height) {
@@ -112,7 +113,7 @@ class ParticleNetwork {
         this.context = this.canvas.getContext('2d');
         this.canvas.width = this.containerSize.width;
         this.canvas.height = this.containerSize.height;
-        this.context.globalAlpha = 0.25;
+        this.context.globalAlpha = dimming;
 
         this.setStyles(this.container, { position: 'relative' });
         this.setStyles(this.canvas, { zIndex: 20, position: 'relative' });
@@ -215,6 +216,8 @@ class ParticleNetwork {
             let section = this.sections[((particle.y - buffer) / sectionHeight) | 0][((particle.x - buffer) / sectionWidth) | 0];
             section.addParticle(particle);
         }
+
+        this.context.globalAlpha = dimming;
     }    
 
     handleMouseMove(event) {
@@ -222,7 +225,7 @@ class ParticleNetwork {
         this.interactiveParticle.y = event.clientY - this.canvas.offsetTop;
     }
 
-    handleMouseUp() {
+    handleMouseUp(event) {
         var sectionWidth = ((this.canvas.width + 2 * buffer)/ this.options.numSections) | 0;
         var sectionHeight = ((this.canvas.height + 2 * buffer)/ this.options.numSections) | 0;
         //Assign velocity to interactive particle
@@ -237,6 +240,9 @@ class ParticleNetwork {
         //Create new interactive particle
         this.interactiveParticle = new Particle(this);
         this.interactiveParticle.velocity = { x: 0, y: 0 };
+        this.interactiveParticle.x = event.clientX - this.canvas.offsetLeft;
+        this.interactiveParticle.y = event.clientY - this.canvas.offsetTop;
+
     }
 
     drawSectionBoundaries() {
@@ -398,15 +404,15 @@ class ParticleNetwork {
 }
 
 // Initialization
-function loadParticles() {
+function loadParticles(backgroundColor) {
     const container = document.getElementById("particle-canvas");
     const options = {
         particleColor: '#FFF',
         interactive: true,
-        background: '#000000',
+        background: backgroundColor,
         velocity: 4,
-        density: 4000,
-        numSections: 7,
+        density: 3000,
+        numSections: 5,
 
     };
     new ParticleNetwork(container, options);
