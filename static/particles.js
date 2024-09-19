@@ -115,7 +115,6 @@ class ParticleNetwork {
         this.canvas.height = this.containerSize.height;
         this.context.globalAlpha = dimming;
 
-        this.setStyles(this.container, { position: 'relative' });
         this.setStyles(this.canvas, { zIndex: 20, position: 'relative' });
 
         window.addEventListener('resize', this.handleResize.bind(this));
@@ -405,13 +404,13 @@ class ParticleNetwork {
 
 // Initialization
 function loadParticles(backgroundColor) {
-    const container = document.getElementById("particle-canvas");
+    const container = document.getElementById("particleCanvas");
     const options = {
         particleColor: '#FFF',
         interactive: true,
         background: backgroundColor,
         velocity: 4,
-        density: 3000,
+        density: 2500,
         numSections: 5,
 
     };

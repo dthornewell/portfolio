@@ -1,5 +1,4 @@
-html,
-body {
+html, body {
   height: 100%;
   width: 100%;
   margin: 0;
@@ -7,7 +6,30 @@ body {
   overflow: hidden;
 }
 
-#particle-canvas {
+#particleCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  z-index: 1; /* Behind the content */
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  padding-top: 20%;
+}
+
+.navbar {
+  z-index: 2; /* Ensure navbar stays above the particle canvas */
+}
+
+.belowNav {
+  position: sticky;
+  z-index: 2; /* Ensure content stays above the particle canvas */
+  height: 56px; /* Same height as a standard Bootstrap navbar */
+  background: linear-gradient(to bottom, rgba(33, 37, 41, 1) 0%, rgba(33, 37, 41, 0) 100%);
 }
