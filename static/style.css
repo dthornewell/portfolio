@@ -3,7 +3,8 @@ html, body {
   width: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth; /* Smooth scrolling between sections */
 }
 
 #particleCanvas {
@@ -27,9 +28,26 @@ html, body {
   z-index: 2; /* Ensure navbar stays above the particle canvas */
 }
 
+.nav-link2 {
+  padding: 0; /* Remove default padding */
+  margin: 0 0.5rem; /* Optional: Add some margin between the icons */
+  display: inline-flex; /* Shrink the clickable area to fit the SVG */
+  align-items: center; /* Vertically center the icon */
+}
+
 .belowNav {
-  position: sticky;
+  position: fixed;
   z-index: 2; /* Ensure content stays above the particle canvas */
   height: 56px; /* Same height as a standard Bootstrap navbar */
+  margin-top: 56px; /* Same height as a standard Bootstrap navbar */
   background: linear-gradient(to bottom, rgba(33, 37, 41, 1) 0%, rgba(33, 37, 41, 0) 100%);
+}
+
+section {
+  min-height: 100vh; /* Ensure each section takes up at least the full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding-top: 60px; /* Padding to prevent overlap with the fixed navbar */
 }

@@ -4,49 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Particle Background with Navbar</title>
+    <title>Portfolio</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-    <link rel="stylesheet" type="text/css" href="static/style.css">
-    <script type="text/javascript" src="static/particles.js"></script>
+    </head>
 
-</head>
-
-<body onload="loadParticles('#212529');">
+<body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
             <ul class="nav nav-tabs" data-bs-theme="dark">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Home</a>
+                    <a class="nav-link active" href="#home" id="link-home">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Projects</a>
+                    <a class="nav-link" href="#projects" id="link-projects">Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Skills</a>
+                    <a class="nav-link" href="#skills" id="link-skills">Skills</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Education</a>
+                    <a class="nav-link" href="#education" id="link-education">Education</a>
                 </li>
             </ul>
 
             <ul class="nav justify-content-end" data-bs-theme="dark">
+                <li class="nav-item"></li>
+                    <a href="../static/MA_341_Homework_1.pdf" download="DannyResume.pdf" target="_blank" title="Resume" class="nav-link2">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" height="35" width="35">
+                            <path d="m78.406 18.344h-7.9375v-8.3125zm3.6875 6.25v62.688c0.003906 1.5859-0.62109 3.1055-1.7422 4.2266-1.1211 1.1211-2.6406 1.7461-4.2266 1.7422h-52.25c-1.5859 0.003906-3.1055-0.62109-4.2266-1.7422-1.1211-1.1211-1.7461-2.6406-1.7422-4.2266v-74.562c-0.003906-1.5859 0.62109-3.1055 1.7422-4.2266 1.1211-1.1211 2.6406-1.7461 4.2266-1.7422h40.344v14.719c0.003906 1.7227 1.4023 3.1211 3.125 3.125zm-55.375 4.9062c0.003906 1.7227 1.4023 3.1211 3.125 3.125h20.156c1.7266 0 3.125-1.3984 3.125-3.125s-1.3984-3.125-3.125-3.125h-20.156c-1.7227 0.003906-3.1211 1.4023-3.125 3.125zm46.562 50.75c-0.003906-1.7227-1.4023-3.1211-3.125-3.125h-40.312c-1.7266 0-3.125 1.3984-3.125 3.125s1.3984 3.125 3.125 3.125h40.312c1.7227-0.003906 3.1211-1.4023 3.125-3.125zm0-12.688c-0.003906-1.7227-1.4023-3.1211-3.125-3.125h-40.312c-1.7266 0-3.125 1.3984-3.125 3.125s1.3984 3.125 3.125 3.125h40.312c1.7227-0.003906 3.1211-1.4023 3.125-3.125zm0-12.688c-0.003906-1.7227-1.4023-3.1211-3.125-3.125h-40.312c-1.7266 0-3.125 1.3984-3.125 3.125s1.3984 3.125 3.125 3.125h40.312c1.7227-0.003906 3.1211-1.4023 3.125-3.125zm0-12.688c-0.003906-1.7227-1.4023-3.1211-3.125-3.125h-40.312c-1.7266 0-3.125 1.3984-3.125 3.125s1.3984 3.125 3.125 3.125h40.312c1.7227-0.003906 3.1211-1.4023 3.125-3.125z" fill="#FFF"/>
+                           </svg>
+                    </a>
+                </li>
                 <li class="nav-item">
-                    <a href="mailto:dthornewell@outlook.com" target="_blank" title="Email" class="nav-link">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none">
-                            <path d="M4 10L10.1076 14.6122L10.1097 14.6139C10.7878 15.1112 11.1271 15.36 11.4988 15.4561C11.8272 15.5411 12.1725 15.5411 12.501 15.4561C12.8729 15.3599 13.2132 15.1104 13.8926 14.6122L20 10M19.8002 9.03944L14.2012 4.55657C13.506 3.99995 13.1581 3.72174 12.7715 3.61126C12.4304 3.51378 12.0692 3.50861 11.7255 3.59661C11.336 3.69634 10.9809 3.96473 10.2705 4.50188L4.26953 9.03967C3.8038 9.39184 3.57123 9.56804 3.40332 9.7906C3.2546 9.98772 3.14377 10.2107 3.07624 10.4482C3 10.7163 3 11.0083 3 11.5922V17.8001C3 18.9202 3 19.4805 3.21799 19.9083C3.40973 20.2847 3.71547 20.5904 4.0918 20.7822C4.5192 20.9999 5.07899 20.9999 6.19691 20.9999H17.8031C18.921 20.9999 19.48 20.9999 19.9074 20.7822C20.2837 20.5904 20.5905 20.2844 20.7822 19.9081C21 19.4807 21 18.9214 21 17.8035V11.5265C21 10.9693 21 10.689 20.9287 10.4301C20.8651 10.1992 20.7595 9.98161 20.619 9.78768C20.4604 9.56876 20.2409 9.39227 19.8002 9.03944Z" stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
+                    <a href="mailto:dthornewell@outlook.com" target="_blank" title="Email" class="nav-link2">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" height="35" width="35">
+                            <path d="m94.531 38zm-32.121 29.09 28 23.352v-46.711zm-25.582 2.9102 3 2.4688c4.6953 3.9609 11.559 3.9609 16.25 0l2.9219-2.4688 27.5 23h-77.191zm1.3906-4.5703-31.539-26.43 35.93-30c3.0625-2.5859 7.5391-2.5859 10.602 0l35.93 30-31.551 26.379-4.3789 3.6211c-3.0625 2.5859-7.5391 2.5859-10.602 0l-4.3398-3.6289h-0.050781zm-32.77 25.012 28-23.352-28-23.359z" fill="#FFF"/>
+                           </svg>
                     </a>
                 </li>
                 <li class="nav-item"></li>
-                <a href="https://www.linkedin.com/" target="_blank" title="LinkedIn" class="nav-link">
-                <svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" height="35" width="35"
-                    viewBox="0 0 72 72">
+                <a href="https://www.linkedin.com/in/danny-thornewell-3a0469290/" target="_blank" title="LinkedIn" class="nav-link2">
+                <svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" height="35" width="35" viewBox="0 0 72 72">
                     <path
                         d="M8,72 L64,72 C68.418278,72 72,68.418278 72,64 L72,8 C72,3.581722 68.418278,-8.11624501e-16 64,0 L8,0 C3.581722,8.11624501e-16 -5.41083001e-16,3.581722 0,8 L0,64 C5.41083001e-16,68.418278 3.581722,72 8,72 Z"
                         fill="#FFF" />
@@ -57,9 +60,8 @@
                 </a>
                 </li>
                 <li class="nav-item">
-                    <a href="https://github.com/" target="_blank" title="GitHub" class="nav-link">
-                    <svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" height="35" width="35"
-                        viewBox="0 0 98 96">
+                    <a href="https://github.com/dthornewell" target="_blank" title="GitHub" class="nav-link2">
+                    <svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" height="35" width="35" viewBox="0 0 98 96">
                         <path
                             d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z"
                             fill="#fff"></path>
@@ -70,18 +72,40 @@
         </div>
     </nav>
 
-    <div class="belowNav"></div>
+    <div class="belowNav fixed-top"></div>
 
-    <!-- Particle background canvas -->
     <div id="particleCanvas"></div>
 
-    <!-- Main Content -->
-    <div class="container content">
-        <h1 class="display-4">Welcome</h1>
-        <p class="lead">Test</p>
-        <a href="#" class="btn btn-primary">Button</a>
-    </div>
+    <section id="home">
+        <div class="container content">
+            <h1 class="display-4">Welcome</h1>
+            <p class="lead">Test</p>
+            <a href="#" class="btn btn-primary">Button</a>
+        </div>
+    </section>
 
+    <!-- Main Content -->
+    
+
+    <!-- Sections -->
+    <section class="container-fluid content" id="projects">
+        <h1>Projects</h1>
+        <p>Details about projects go here. Add more content as needed to make this section scrollable.</p>
+    </section>
+
+    <section class="container-fluid content" id="skills">
+        <h1>Skills</h1>
+        <p>Details about skills go here. Add more content as needed to make this section scrollable.</p>
+    </section>
+
+    <section class="container-fluid content" id="education">
+        <h1>Education</h1>
+        <p>Details about education go here. Add more content as needed to make this section scrollable.</p>
+    </section>
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+    <script type="text/javascript" src="static/particles.js"></script>
+    <script src="static/tabs.js"></script>
+    <script>loadParticles('#212529');</script>
 </body>
 
 </html>
