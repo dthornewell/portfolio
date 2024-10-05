@@ -20,3 +20,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
     sections.forEach(section => observer.observe(section));
 });
+
+
+function flipCard(card, event) {
+    // Check if the click was on the carousel controls or inner elements
+    const clickedElement = event.target;
+
+    // If the clicked element is a carousel control or inside the carousel, do not flip
+    if (clickedElement.closest('.carousel') || clickedElement.closest('.carousel-control-next') || clickedElement.closest('.carousel-control-prev')) {
+        return; // Stop flipping when clicking inside the carousel
+    }
+
+    // Toggle the flip class when clicked outside the carousel
+    card.classList.toggle('flipped');
+}
