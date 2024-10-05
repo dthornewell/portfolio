@@ -10,6 +10,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+
     </head>
 
 <body>
@@ -88,23 +90,84 @@
     
 
     <!-- Sections -->
-    <section class="container-fluid content" id="projects">
-        <h1>Projects</h1>
-        <p>Details about projects go here. Add more content as needed to make this section scrollable.</p>
+    <section id="projects" class="container-fluid content">
+        <div class="section-content container-fluid">
+            <h1 class="text-center my-4">Projects</h1>
+            <div class="row">
+                <!-- Repeat this column block for each project -->
+                <div class="col-12 col-md-6">
+                    <div class="project-card">
+                        <div id="project1Carousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="/static/images/reversi/reversiWebsite.png" alt="Reversi Website">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="/static/images/reversi/reversiConsole.png" alt="Reversi Console">
+                                </div>
+                            </div>
+                            <!-- Carousel controls -->
+                            <button class="carousel-control-prev" type="button" data-bs-target="#project1Carousel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#project1Carousel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <h2 class="project-title">Reversi AI</h2>
+                        <p class="project-description">Description of Project 1. Showcase your work in more detail here.</p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <div class="project-card">
+                        <img src="static/images/rat/rat.png" alt="Rat">
+                        <h2 class="project-title">Rat</h2>
+                        <p class="project-description">Description of Project 2. Showcase your work in more detail here.</p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <div class="project-card">
+                        <img src="https://via.placeholder.com/600x400" alt="Project 3 Image">
+                        <h2 class="project-title">Project 3</h2>
+                        <p class="project-description">Description of Project 3. Showcase your work in more detail here.</p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <div class="project-card">
+                        <img src="https://via.placeholder.com/600x400" alt="Project 4 Image">
+                        <h2 class="project-title">Project 4</h2>
+                        <p class="project-description">Description of Project 4. Showcase your work in more detail here.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
+
     <section class="container-fluid content" id="skills">
-        <h1>Skills</h1>
-        <p>Details about skills go here. Add more content as needed to make this section scrollable.</p>
+        <div class="section-content container-fluid">
+            <h1>Skills</h1>
+            <p>Details about skills go here. Add more content as needed to make this section scrollable.</p>
+        </div>
     </section>
 
     <section class="container-fluid content" id="education">
-        <h1>Education</h1>
-        <p>Details about education go here. Add more content as needed to make this section scrollable.</p>
+        <div class="section-content container-fluid">
+            <h1>Education</h1>
+            <p>Details about education go here. Add more content as needed to make this section scrollable.</p>
+        </div>
     </section>
-    <link rel="stylesheet" type="text/css" href="static/style.css">
-    <script type="text/javascript" src="static/particles.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
     <script src="static/tabs.js"></script>
+    <script type="text/javascript" src="static/particles.js"></script>
     <script>loadParticles('#212529');</script>
 </body>
 
