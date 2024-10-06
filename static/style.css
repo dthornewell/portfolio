@@ -67,8 +67,9 @@ section {
   border-radius: 15px;
   padding: 30px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
-  margin-bottom: 50px;
   text-align: center;
+  height: inherit;
+  width: 100%;
 }
 
 .project-card img {
@@ -97,6 +98,20 @@ section {
     border-radius: 50%; /* Makes the control icons round */
     width: 40px;
     height: 40px;
+}
+
+.flip-card {
+  cursor: pointer;
+}
+
+/* Carousel controls should have pointer cursor */
+.carousel-control-prev, .carousel-control-next {
+  cursor: pointer;
+}
+
+/* No pointer cursor for images inside the card (non-clickable) */
+.flip-card-inner img {
+  cursor: default;
 }
 
 /* Flip the card when it has the flipped class */
@@ -135,7 +150,6 @@ section {
 .flip-card-front {
   z-index: 2; /* Front side of the card */
   display: block; /* Ensure it takes full width and height of its container */
-  padding: 20px;
 }
 
 .carousel {
@@ -150,6 +164,5 @@ section {
 
 .flip-card-back {
   transform: rotateY(180deg);
-  padding: 20px;
   box-sizing: border-box;
 }

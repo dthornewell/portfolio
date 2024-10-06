@@ -49,9 +49,11 @@ function setCardHeight(card) {
     const back = card.querySelector('.flip-card-back');
     const flipInner = card.querySelector('.flip-card-inner');
 
+    flipInner.style.height = 'auto';
+
     // Get the maximum height between the front and back
     const maxHeight = Math.max(front.scrollHeight, back.scrollHeight);
 
     // Set the height of the flip-card-inner dynamically
-    flipInner.style.height = maxHeight + 'px';
+    flipInner.style.height = maxHeight + 20 + 'px';
 }
