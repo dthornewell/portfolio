@@ -122,39 +122,51 @@
                 </div>
 
                 <div class="col-12 col-md-6">
-                    <div class="project-card">
-                        <div id="project2Carousel" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="/static/images/AMP/AMP.png" alt="AMP Logo">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="/static/images/AMP/Track1.png" alt="Track Image">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="/static/images/AMP/Track2.png" alt="Track Image">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="/static/images/AMP/Track3.png" alt="Track Image">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="/static/images/AMP/Track4.png" alt="Track Image">
+                    <div class="flip-card" onclick="flipCard(this, event)">
+                        <div class="flip-card-inner">
+                            <!-- Front side of the card -->
+                            <div class="flip-card-front">
+                                <div class="project-card">
+                                    <div id="project2Carousel" class="carousel slide" data-bs-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="/static/images/AMP/AMP.png" alt="AMP Logo" class="img-fluid">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="/static/images/AMP/Track1.png" alt="Track Image" class="img-fluid">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="/static/images/AMP/Track2.png" alt="Track Image" class="img-fluid">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="/static/images/AMP/Track3.png" alt="Track Image" class="img-fluid">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="/static/images/AMP/Track4.png" alt="Track Image" class="img-fluid">
+                                            </div>
+                                        </div>
+                                        <!-- Carousel controls -->
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#project2Carousel" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#project2Carousel" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+                                    <h2 class="project-title">Autonomous Motorsports Purdue</h2>
                                 </div>
                             </div>
-                            <!-- Carousel controls -->
-                            <button class="carousel-control-prev" type="button" data-bs-target="#project2Carousel" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#project2Carousel" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
+                            <!-- Back side of the card -->
+                            <div class="flip-card-back">
+                                <h2 class="project-title">Project Details</h2>
+                                <p class="project-description">This is a brief description of the Autonomous Motorsports Purdue project. It involves autonomous racing using AI and sensor fusion technology.</p>
+                            </div>
                         </div>
-                        <h2 class="project-title">Autonomous Motorsports Purdue</h2>
-                        <p class="project-description">Description of Project 2. Showcase your work in more detail here.</p>
                     </div>
                 </div>
+                
 
                 <div class="col-12 col-md-6">
                     <div class="project-card">

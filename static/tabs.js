@@ -19,6 +19,15 @@ document.addEventListener("DOMContentLoaded", function() {
     }, observerOptions);
 
     sections.forEach(section => observer.observe(section));
+
+    const cards = document.querySelectorAll('.flip-card');
+    cards.forEach(card => setCardHeight(card));
+});
+
+window.addEventListener('resize', function() {
+    // Recalculate the height on window resize
+    const cards = document.querySelectorAll('.flip-card');
+    cards.forEach(card => setCardHeight(card));
 });
 
 
@@ -33,4 +42,16 @@ function flipCard(card, event) {
 
     // Toggle the flip class when clicked outside the carousel
     card.classList.toggle('flipped');
+}
+
+function setCardHeight(card) {
+    const front = card.querySelector('.flip-card-front');
+    const back = card.querySelector('.flip-card-back');
+    const flipInner = card.querySelector('.flip-card-inner');
+
+    // Get the maximum height between the front and back
+    const maxHeight = Math.max(front.scrollHeight, back.scrollHeight);
+
+    // Set the height of the flip-card-inner dynamically
+    flipInner.style.height = maxHeight + 'px';
 }
