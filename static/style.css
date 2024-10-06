@@ -81,17 +81,6 @@ section {
   margin-bottom: 20px; /* Spacing below the image */
 }
 
-
-.project-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.project-description {
-  font-size: 1rem;
-  color: #ababab;
-}
-
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     background-color: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent black background */
@@ -165,4 +154,71 @@ section {
 .flip-card-back {
   transform: rotateY(180deg);
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Stack title and description */
+  text-align: center;
+  height: 100%; /* Make sure it fills the card */
+}
+
+/* Dynamically adjust font size */
+.project-title {
+  font-size: calc(1.5rem + 0.5vw); /* Scale based on screen size */
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.project-description {
+  font-size: calc(1rem + 0.25vw); /* Slightly smaller than the title */
+  line-height: 1.5;
+  padding: 0 15px;
+  color: #ababab;
+}
+
+.education-card {
+  background-color: rgba(33, 37, 41, 0.85);
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/* Image on the left */
+.education-card img {
+  border-radius: 10px;
+  max-height: 150px; /* Slightly smaller image */
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+/* Flex container for text */
+.education-card .education-details {
+  flex-grow: 1;
+}
+
+.education-details {
+  text-align: left;
+}
+
+/* Text alignment for degree, name, minor */
+.education-card h2 {
+  margin-bottom: 5px;
+  font-size: 1.5rem;
+}
+
+.education-card p {
+  margin: 0;
+  font-size: 1rem;
+  color: #ddd; /* Subtle text color */
+}
+
+/* GPA on the far right */
+.education-card .gpa {
+  font-size: 1.2rem;
+  color: #fff;
+  text-align: right;
 }

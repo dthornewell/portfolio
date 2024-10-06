@@ -52,7 +52,7 @@ function setCardHeight(card) {
     flipInner.style.height = 'auto';
 
     // Get the maximum height between the front and back
-    const maxHeight = Math.max(front.scrollHeight, back.scrollHeight);
+    const maxHeight = Math.max(front.scrollHeight, 0/*back.scrollHeight*/);
 
     // Set the height of the flip-card-inner dynamically
     flipInner.style.height = maxHeight + 20 + 'px';
