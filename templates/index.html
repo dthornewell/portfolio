@@ -32,11 +32,14 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#education" id="link-education">Education</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#interactive-particles" id="link-interactive-particles">Interactive Particles</a>
+                </li>
             </ul>
 
             <ul class="nav justify-content-end" data-bs-theme="dark">
                 <li class="nav-item"></li>
-                    <a href="../static/MA_341_Homework_1.pdf" download="DannyResume.pdf" target="_blank" title="Resume" class="nav-link2">
+                    <a href="/static/documents/DannyResume.pdf" download="DannyResume.pdf" target="_blank" title="Resume" class="nav-link2">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" height="35" width="35">
                             <path d="m78.406 18.344h-7.9375v-8.3125zm3.6875 6.25v62.688c0.003906 1.5859-0.62109 3.1055-1.7422 4.2266-1.1211 1.1211-2.6406 1.7461-4.2266 1.7422h-52.25c-1.5859 0.003906-3.1055-0.62109-4.2266-1.7422-1.1211-1.1211-1.7461-2.6406-1.7422-4.2266v-74.562c-0.003906-1.5859 0.62109-3.1055 1.7422-4.2266 1.1211-1.1211 2.6406-1.7461 4.2266-1.7422h40.344v14.719c0.003906 1.7227 1.4023 3.1211 3.125 3.125zm-55.375 4.9062c0.003906 1.7227 1.4023 3.1211 3.125 3.125h20.156c1.7266 0 3.125-1.3984 3.125-3.125s-1.3984-3.125-3.125-3.125h-20.156c-1.7227 0.003906-3.1211 1.4023-3.125 3.125zm46.562 50.75c-0.003906-1.7227-1.4023-3.1211-3.125-3.125h-40.312c-1.7266 0-3.125 1.3984-3.125 3.125s1.3984 3.125 3.125 3.125h40.312c1.7227-0.003906 3.1211-1.4023 3.125-3.125zm0-12.688c-0.003906-1.7227-1.4023-3.1211-3.125-3.125h-40.312c-1.7266 0-3.125 1.3984-3.125 3.125s1.3984 3.125 3.125 3.125h40.312c1.7227-0.003906 3.1211-1.4023 3.125-3.125zm0-12.688c-0.003906-1.7227-1.4023-3.1211-3.125-3.125h-40.312c-1.7266 0-3.125 1.3984-3.125 3.125s1.3984 3.125 3.125 3.125h40.312c1.7227-0.003906 3.1211-1.4023 3.125-3.125zm0-12.688c-0.003906-1.7227-1.4023-3.1211-3.125-3.125h-40.312c-1.7266 0-3.125 1.3984-3.125 3.125s1.3984 3.125 3.125 3.125h40.312c1.7227-0.003906 3.1211-1.4023 3.125-3.125z" fill="#FFF"/>
                            </svg>
@@ -79,10 +82,12 @@
     <div id="particleCanvas"></div>
 
     <section id="home">
-        <div class="container content">
-            <h1 class="display-4">Welcome</h1>
-            <p class="lead">Test</p>
-            <a href="#" class="btn btn-primary">Button</a>
+        <div class="container-fliud content home-content">
+            <h1 class="display-4">Welcome to my Portfolio</h1>
+            <p class="lead">Use the tabs or scroll to navigate</p>
+            <a href="#projects" class="btn btn-primary">Jump to content</a>
+            <a>  or  </a>
+            <a href="#interactive-particles" class="btn btn-primary">Play with the particles</a>
         </div>
     </section>
 
@@ -92,7 +97,7 @@
     <!-- Sections -->
     <section id="projects" class="container-fluid content">
         <div class="section-content container-fluid">
-            <h1 class="text-center my-4">Projects</h1>
+            <h1 class="text-center">Projects</h1>
             <p class="text-center">Click on a project to view more details.</p>
             <div class="row">
                 <!-- Repeat this column block for each project -->
@@ -132,8 +137,17 @@
                                         It has several different heuristic search algorithms including Monte-Carlo Tree Search(MCTS), 
                                         Minimax and Negascout, all with multithreading. I used this AI in a website by compiling it with C wrappings
                                         and using Python's ctype library together with Flask and Javascript. I also made a Windows GUI using Simple DirectMedia Layer (SDL) 2.
-                                        I am currently in the process of remaking it using bitboarding to improve performance.</p>
+                                        I am currently in the process of remaking it using bitboarding to improve performance.
+                                    </p>
                                     
+                                    <div class="tech-stack">
+                                        <span><i class="fab fa-c"></i>C</span>
+                                        <span><i class="fab fa-c++"></i>C++</span>
+                                        <span><i class="fab fa-python"></i>Python</span>
+                                        <span><i class="fab fa-flask"></i>Flask</span>
+                                        <span><i class="fab fa-js"></i>JavaScript</span>
+                                        <span><i class="fab fa-sdl"></i>SDL2</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -185,7 +199,18 @@
                                         won 4th place for engineering at the Purdue Spring Undergraduate Research Symposium, for researching and designing new 
                                         methods for non-machine learning lane detection systems on low compute power systems. I utilized OpenCV and CUDA to isolate
                                         the track lanes before applying a custom bezier curve fit to model the line mathematically. Using these models I then found the
-                                        center line of the track which allowed for local goal planning. My work was used in AMP’s kart entry during the Autonomous Karting Series Grand Prix</p>
+                                        center line of the track which allowed for local goal planning. My work was used in AMP’s kart entry during the Autonomous Karting Series Grand Prix.
+                                    </p>
+
+                                    <div class="tech-stack">
+                                        <span><i class="fab fa-c++"></i>C++</span>
+                                        <span><i class="fab fa-python"></i>Python</span>
+                                        <span><i class="fab fa-opencv"></i>OpenCV</span>
+                                        <span><i class="fab fa-cuda"></i>CUDA</span>
+                                        <span><i class="fab fa-pytorch"></i>PyTorch</span>
+                                        <span><i class="fab fa-jetson"></i>NVIDIA Jetson</span>
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -207,10 +232,16 @@
                                 <div class="project-card">
                                     <h2 class="project-title">Remote Access Trojan (Lead Developer)</h2>
                                     <p class="project-description"> During a cybersecurity independent study senior year of high school, I designed and built a 
-                                        reverse shell virus with command line access on Windows, collaborating with two other friends. The virus was built in C++ and
-                                        used the Windows TCP/IP API (Winsock) to allow remote access anywhere with an internet connection. It Windows Defender (build 20349.1668) 
-                                        using code obfuscation and had full command line (cmd.exe) access. I also added a hub and spokesque system to allow for multiple infected clients
-                                        to connect to a single command and control server. It makes use of a modular design with loadable modules like a keylogger, self-download, and boot on start. </p>
+                                        reverse shell virus with command line access on Windows with two other friends. The virus was built in C++ and
+                                        used the Windows TCP/IP API (Winsock) to allow remote access anywhere over the internet. It bypasses Windows Defender (build 20349.1668) 
+                                        using code obfuscation and has full command line (cmd.exe) access. I also added a hub and spokesque system to allow for multiple infected clients
+                                        to connect to a single command and control server. It makes use of a modular design with loadable modules like a keylogger, self-download, and boot on start.
+                                    </p>
+                                        
+                                    <div class="tech-stack">
+                                        <span><i class="fab fa-c++"></i>C++</span>
+                                        <span><i class="fab fa-tcpip"></i>TCP/IP</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -232,8 +263,14 @@
                                 <div class="project-card">
                                     <h2 class="project-title">Portfolio Website (Sole Developer)</h2>
                                     <p class="project-description">This website right here, built with vanilla Javascript, Bootstrap, CSS and HTML. It includes an interactive particle background
-                                        as well as a responsive design and I plan to add more features in the future.</p>
+                                        as well as a responsive design and I plan to add more features in the future.
                                     </p>
+                                    <div class="tech-stack">
+                                        <span><i class="fab fa-js"></i>JavaScript</span>
+                                        <span><i class="fab fa-bootstrap"></i>Bootstrap</span>
+                                        <span><i class="fab fa-css"></i>CSS</span>
+                                        <span><i class="fab fa-html"></i>HTML</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -244,16 +281,80 @@
     </section>
 
 
-    <section class="container-fluid content" id="skills">
-        <div class="section-content container-fluid">
-            <h1>Skills</h1>
-            <p>Details about skills go here. Add more content as needed to make this section scrollable.</p>
+    <section id="skills" class="container-fluid content">
+        <div class="section-content">
+            <h1 class="text-center my-4">Skills</h1>
+
+            <div class="skills-key">
+                <div class="key-item">
+                    <div class="key-box proficient"></div>
+                    <span>Proficient</span>
+                </div>
+                <div class="key-item">
+                    <div class="key-box familiar"></div>
+                    <span>Familiar</span>
+                </div>
+            </div>
+    
+            <!-- Languages Section -->
+            <div class="skill-category">
+                <h3>Languages</h3>
+                <div class="skill-grid">
+                    <div class="skill-card proficient">C++</div>
+                    <div class="skill-card proficient">C</div>
+                    <div class="skill-card proficient">Java</div>
+                    <div class="skill-card proficient">Python</div>
+                    <div class="skill-card familiar">C#</div>
+                    <div class="skill-card familiar">JavaScript</div>
+                    <div class="skill-card familiar">SQL</div>
+                    <div class="skill-card familiar">HTML</div>
+                    <div class="skill-card familiar">CSS</div>
+                </div>
+            </div>
+    
+            <!-- Frameworks Section -->
+            <div class="skill-category">
+                <h3>Frameworks</h3>
+                <div class="skill-grid">
+                    <div class="skill-card proficient">OpenCV</div>
+                    <div class="skill-card familiar">PyTorch</div>
+                    <div class="skill-card familiar">CUDA</div>
+                    <div class="skill-card familiar">Flask</div>
+                    <div class="skill-card familiar">Bootstrap</div>
+                    <div class="skill-card familiar">Jinja</div>
+                    <div class="skill-card familiar">ctypes</div>
+                    <div class="skill-card familiar">SDL 2</div>
+                    <div class="skill-card familiar">Unity</div>
+                    <div class="skill-card familiar">Unreal Engine</div>
+                </div>
+            </div>
+    
+            <!-- Dev Tools Section -->
+            <div class="skill-category">
+                <h3>Dev Tools</h3>
+                <div class="skill-grid">
+                    <div class="skill-card proficient">Git</div>
+                    <div class="skill-card proficient">GDB</div>
+                    <div class="skill-card proficient">Trello</div>
+                    <div class="skill-card familiar">Ghidra</div>
+                </div>
+            </div>
+    
+            <!-- Hardware Section -->
+            <div class="skill-category">
+                <h3>Hardware</h3>
+                <div class="skill-grid">
+                    <div class="skill-card familiar">Raspberry Pi Pico</div>
+                    <div class="skill-card familiar">Arduino</div>
+                    <div class="skill-card familiar">NVIDIA Jetson</div>
+                </div>
+            </div>
         </div>
     </section>
-
+    
     <section class="container-fluid content" id="education">
         <div class="section-content container-fluid">
-            <h1>Education</h1>
+            <h1 class="text-center">Education</h1>
             <div class="education-card">
                 <img src="/static/images/school/Purdue.jpg" alt="Purdue University">
                 <div class="education-details">
@@ -279,7 +380,38 @@
                     <p>GPA: 3.91/4.0</p>
                 </div>
             </div>
+
+            <div class="coursework-box">
+                <div class="coursework-skills-key">
+                    <h4>Relevant Coursework</h4>
+                    <div class="key-box">
+                        <div class="key-item">
+                            <div class="key-color completed"></div>
+                            <span>Completed</span>
+                        </div>
+                        <div class="key-item">
+                            <div class="key-color in-progress"></div>
+                            <span>In Progress</span>
+                        </div>
+                    </div>
+                </div>
+
+                <ul class="coursework-list">
+                    <li class="completed">Linear Algebra</li>
+                    <li class="completed">Multivariable Calculus (Honors)</li>
+                    <li class="completed">Programming in C</li>
+                    <li class="completed">Discrete Math (Honors)</li>
+                    <li class="completed">Undergraduate Research with AMP</li>
+                    <li class="in-progress">Data Structures & Algorithms</li>
+                    <li class="in-progress">Computer Architecture</li>
+                    <li class="in-progress">Intro to Mathematical Analysis</li>
+                </ul>
+            </div>
         </div>
+    </section>
+
+    <section id="interactive-particles" class="container-fluid interactive-section">
+        <div id="particleCanvasInteractive"></div>
     </section>
     
 

@@ -16,6 +16,21 @@ html, body {
   z-index: 1; /* Behind the content */
 }
 
+body::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.8); /* Background of the scrollbar track */
+  border-radius: 10px; /* Rounded edges */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #666; /* Color of the scrollbar handle */
+  border-radius: 10px; /* Rounded handle */
+  border: 2px solid rgba(0, 0, 0, 0.2); /* Space between the handle and the track */
+}
+
 .content {
   position: relative;
   z-index: 1;
@@ -53,12 +68,19 @@ section {
 }
 
 .section-content {
-  background-color: rgba(22, 25, 27, 0.85); /* White with 85% opacity */
+  background-color: rgba(22, 25, 27, 0.85);
   border-radius: 15px;
   padding: 30px;
   width: 95%;
   text-align: center;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+.home-content {
+  padding: 30px;
+  width: 95%;
+  height: 100%;
+  text-align: center;
 }
 
 /* Project card styling for bigger showcase */
@@ -69,6 +91,9 @@ section {
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
   text-align: center;
   height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Stack content with space between */
   width: 100%;
 }
 
@@ -164,16 +189,60 @@ section {
 
 /* Dynamically adjust font size */
 .project-title {
-  font-size: calc(1.5rem + 0.5vw); /* Scale based on screen size */
+  font-size: clamp(1.5rem ,1.5rem + 0.5vw, 2.5rem); /* Scale based on screen size */
   margin-bottom: 10px;
   font-weight: bold;
 }
 
 .project-description {
-  font-size: calc(1rem + 0.35vw); /* Slightly smaller than the title */
+  font-size: clamp(1rem, 1rem + 0.35vw, 2rem); /* Slightly smaller than the title */
   line-height: 1.5;
   padding: 0 15px;
   color: #ababab;
+  overflow-y: auto; /* Enable vertical scrolling */
+  max-height: 85%; /* Limit height of description to half of the card */
+  padding-right: 10px; /* Add padding to avoid scrollbar overlap */
+  margin-bottom: 10px;
+}
+
+.project-description::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+.project-description::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2); /* Background of the scrollbar track */
+  border-radius: 10px; /* Rounded edges */
+}
+
+.project-description::-webkit-scrollbar-thumb {
+  background-color: #666; /* Color of the scrollbar handle */
+  border-radius: 10px; /* Rounded handle */
+  border: 2px solid rgba(0, 0, 0, 0.2); /* Space between the handle and the track */
+}
+
+.project-card .project-title, 
+.project-card .project-description {
+  margin-bottom: 10px;
+}
+
+/* Skills/tech stack section at the bottom */
+.tech-stack {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Wrap the tech stack if too many items */
+  margin-top: 15px;
+  margin-top: auto; /* Ensure it stays at the bottom */
+}
+
+.tech-stack span {
+  background-color: #444;
+  color: #fff;
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .education-card {
@@ -207,12 +276,12 @@ section {
 /* Text alignment for degree, name, minor */
 .education-card h2 {
   margin-bottom: 5px;
-  font-size: calc(1.5rem + 0.5vw);
+  font-size: clamp(1rem, 1.25rem + 0.5vw, 2.5rem);
 }
 
 .education-card p {
   margin: 0;
-  font-size: calc(1rem + 0.2vw); /* Slightly smaller than the title */
+  font-size: clamp(1rem, 1rem + 0.2vw, 1.2rem); /* Slightly smaller than the title */
   color: #ddd; /* Subtle text color */
 }
 
@@ -220,4 +289,210 @@ section {
 .education-card .gpa {
   color: #fff;
   text-align: right;
+}
+
+.education-card h5 {
+  margin: 0;
+  font-size: clamp(1rem, 1.1rem + 0.3vw, 1.5rem);
+  color: #ddd;
+}
+
+
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px 0;
+}
+
+/* Skill Category Container */
+.skill-category {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Category Heading */
+.skill-category h3 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: left;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+/* Grid layout for the individual skill cards, aligned left */
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, max-content)); /* Align left */
+  gap: 15px; /* Space between the cards */
+  justify-content: start; /* Align items to the left */
+}
+
+/* Individual Skill Card */
+.skill-card {
+  background-color: rgba(33, 37, 41, 0.85);
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1rem;
+  height: 100px; /* Square shape */
+  width: 100px;  /* Square shape */
+  transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+  background-color: rgba(45, 49, 54, 0.85);
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.4);
+  transform: translateY(-5px);
+}
+
+/* Proficient skills with a solid border */
+.skill-card.proficient {
+  border: 2px solid rgba(0, 123, 255, 0.85);
+}
+
+/* Familiar skills with a dashed border */
+.skill-card.familiar {
+  border: 2px dashed rgba(255, 193, 7, 0.85);
+}
+
+.skills-key {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.key-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.key-box {
+  height: 20px;
+  border-radius: 5px;
+}
+
+.key-box.proficient {
+  border: 2px solid rgba(0, 123, 255, 0.85); /* Same as the card */
+}
+
+.key-box.familiar {
+  border: 2px dashed rgba(255, 193, 7, 0.85); /* Same as the card */
+}
+
+.coursework-box {
+  background-color: rgba(33, 37, 41, 0.85);
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 15px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+
+.coursework-box h4 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+.coursework-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+.coursework-list li {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #fff;
+  border: 2px solid transparent; /* Default border */
+}
+
+/* Key styling for both coursework and skills */
+.coursework-skills-key {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.coursework-box h4 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+/* Key for differentiating skills */
+.key-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.key-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.key-box .key-color {
+  width: 15px;
+  height: 15px;
+  border-radius: 5px;
+}
+
+.coursework-skills-key {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.coursework-box h4 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+
+.key-color.completed {
+  border: 2px solid rgba(0, 255, 0, 0.85); /* Completed (Solid Border) */
+}
+
+.key-color.in-progress {
+  border: 2px dashed rgba(255, 130, 0, 0.85); /* In Progress (Dashed Border) */
+}
+
+.coursework-list li.completed {
+  border: 2px solid rgba(0, 255, 0, 0.85); /* Completed (Solid Border) */
+}
+
+/* In-progress Courses */
+.coursework-list li.in-progress {
+  border: 2px dashed rgba(255, 130, 0, 0.85); /* In Progress (Dashed Border) */
+}
+
+.interactive-section {
+  width: 100%;
+  height: 100vh; /* Full screen height */
+  position: relative;
+  z-index: 0; /* Ensure nothing overlaps */
+  overflow: hidden; /* Ensure particles don’t go beyond the section */
+}
+
+#particleCanvasInteractive {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Keep canvas behind everything */
+  pointer-events: none;
 }
