@@ -1,10 +1,6 @@
 from flask import Flask, render_template
-import os
 
-
-template_dir = os.path.abspath('../../')
-print(template_dir)
-app = Flask(__name__, template_folder='/')
+app = Flask(__name__, template_folder='static/../')
 app.config['TEMPLATES_AUTO_RELOAD'] = True
 
 @app.route("/")
