@@ -99,7 +99,7 @@ section {
 }
 
 /* No pointer cursor for images inside the card (non-clickable) */
-.flip-card-inner img {
+.carousel img {
   cursor: default;
 }
 
@@ -170,7 +170,7 @@ section {
 }
 
 .project-description {
-  font-size: calc(1rem + 0.25vw); /* Slightly smaller than the title */
+  font-size: calc(1rem + 0.35vw); /* Slightly smaller than the title */
   line-height: 1.5;
   padding: 0 15px;
   color: #ababab;
@@ -207,18 +207,17 @@ section {
 /* Text alignment for degree, name, minor */
 .education-card h2 {
   margin-bottom: 5px;
-  font-size: 1.5rem;
+  font-size: calc(1.5rem + 0.5vw);
 }
 
 .education-card p {
   margin: 0;
-  font-size: 1rem;
+  font-size: calc(1rem + 0.2vw); /* Slightly smaller than the title */
   color: #ddd; /* Subtle text color */
 }
 
 /* GPA on the far right */
 .education-card .gpa {
-  font-size: 1.2rem;
   color: #fff;
   text-align: right;
 }
