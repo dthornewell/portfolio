@@ -377,6 +377,10 @@ section {
   border-radius: 5px;
 }
 
+.skills-key .key-box {
+  width: 20px;
+}
+
 .key-box.proficient {
   border: 2px solid rgba(0, 123, 255, 0.85); /* Same as the card */
 }
